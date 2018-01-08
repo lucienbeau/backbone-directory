@@ -1,0 +1,12 @@
+//= require vendor/jquery
+//= require vendor/jquery.transit
+//= require vendor/handlebars
+//= require vendor/underscore
+//= require vendor/backbone
+//= require vendor/backbone.localstorage
+//= require_directory ./moi
+//= require_directory ./models
+//= require_directory ./collections
+//= require_directory ./views
+//= require_directory ./routers
+//= require app

@@ -1,0 +1,11 @@
+#toast {
+  display: none;
+  background: #000;
+  background: rgba(0,0,0,0.8);
+  color: shade(#fff, 0.2);
+  p {
+    font-style: italic;
+    margin: 0;
+    padding: 0.5em 1.5em;
+  }
+}

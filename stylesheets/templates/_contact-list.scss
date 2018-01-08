@@ -1,0 +1,33 @@
+#employee-list > li {
+  @include transition(background 0.2s ease-in-out);
+  padding: 1em 1em;
+  border-bottom: 1px solid #eee;
+
+  a { display: block; }
+
+  h3 {
+    margin: 0;
+    font-size: em(20);
+    font-weight: bold;
+  }
+
+  p {
+    margin: 0;
+    font-size: em(15);
+    font-style: italic;
+  }
+
+  &:last-child { border-bottom: none; }
+
+  &:hover { background: shade(#fff, 2%); }
+}
+
+.contact-list-img {
+  display: inline-block;
+  vertical-align: top;
+  width: 50px;
+}
+.contact-list-info {
+  display: inline-block;
+  margin-left: 20px;
+}

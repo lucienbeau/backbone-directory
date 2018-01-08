@@ -1,0 +1,24 @@
+<script id="employee-add" type="text/x-handlebars-template">
+  <h3>Add Employee</h3>
+
+  <label for="e-name">Name</label>
+  <input id="e-name" type="text" placeholder="Enter Name...">
+  
+  <label for="e-title">Title</label>
+  <input id="e-title" type="text" placeholder="Enter title...">
+  
+  <label for="e-office">Office Phone Number</label>
+  <input id="e-office" type="tel" pattern="[0-9]{3}[-|.][0-9]{4}" placeholder="Enter Phone Number...">
+
+  <label for="e-cell">Cell Phone Number</label>
+  <input id="e-cell" type="tel" pattern="[0-9]{3}[-|.][0-9]{4}" placeholder="Enter Cell Number...">
+
+  <label for="e-email">Email</label>
+  <input id="e-email" type="email" placeholder="Enter Email...">
+
+  <label for="e-description">Description</label>
+  <textarea id="e-description" placeholder="Enter Description..."></textarea>
+
+  <button id="e-submit" class="button-flat button-raised">Create</button>
+  <button id="e-back" class="button-flat button-raised">Nevermind</button>
+</script>

@@ -1,0 +1,53 @@
+<script id="employee-details" type="text/x-handlebars-template">
+  <p class="detail-tip">Double Click to Edit</p>
+  <p><img src="images/{{img}}" alt="{{name}}"></p>
+  <table>
+    <tr>
+      <td>Name:</td> 
+      <td>
+        <span>{{name}}</span>
+        <input id="name" type="text" value="{{name}}" placeholder="Name...">
+      </td>
+    </tr>
+    <tr>
+      <td>Title:</td>
+      <td>
+        <span>{{title}}</span>
+        <input id="title" type="text" value="{{title}}" placeholder="Title...">
+      </td>
+    </tr>
+    <tr>
+      <td>Office Number:</td>
+      <td>
+        <span>{{office}}</span>
+        <input id="office" type="tel" value="{{office}}" pattern="[0-9]{3}[-|.][0-9]{4}" placeholder="Office Number...">
+      </td>
+    </tr>
+    <tr>
+      <td>Cell Number:</td>
+      <td>
+        <span>{{cell}}</span>
+        <input id="cell" type="tel" value="{{cell}}" pattern="[0-9]{3}[-|.][0-9]{4}" placeholder="Cell Number...">
+      </td>
+    </tr>
+    <tr>
+      <td>Email:</td>
+      <td>
+        <span>{{email}}</span>
+        <input id="email" type="email" value="{{email}}" placeholder="Email...">
+      </td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>
+        <span>{{description}}</span>
+        <input id="description" type="text" value="{{description}}" placeholder="Description...">
+      </td>
+    </tr>
+  </table>
+
+  <footer>
+    <button id="btn-back" class="button-raised button-flat button-small">Back</button>
+    <button id="btn-delete" class="button-flat button-small">Delete</button>
+  </footer>
+</script>

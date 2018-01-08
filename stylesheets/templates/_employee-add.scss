@@ -1,0 +1,10 @@
+#employee-add {
+  @extend %card;
+
+  label { display: none; }
+
+  input,textarea{ 
+    margin: 0 0 1.5em;
+    width: 95%;
+  }
+}

@@ -1,0 +1,7 @@
+%card {
+  @include position(absolute, 1px 0 null 10px);
+  box-shadow: -3px 0px 6px -2px #ccc;
+  background: #fff;
+  padding: 16px;
+  padding: 1rem;
+}

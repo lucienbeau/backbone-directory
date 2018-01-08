@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    meta name="description" content="backbone-proj"
+    
+    title = current_page.data.title || "Employee Directory"
+
+    = stylesheet_link_tag "all"
+
+    /[if lt IE 9]
+      = javascript_include_tag "vendor/html5shiv"
+  
+  body class="#{page_classes}"
+    = yield
+
+
+    = partial 'templates/contact-list';
+    = partial 'templates/employee-details';
+    = partial 'templates/employee-add';
+    = javascript_include_tag "all"

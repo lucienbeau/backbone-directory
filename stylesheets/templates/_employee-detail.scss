@@ -1,0 +1,20 @@
+#employee-detail {
+  @extend %card;
+  
+  margin-bottom: 30px;
+  tr:nth-child(2n) { background: rgb(250,250,250); }
+  tr > td:first-child { padding-left: 1em; }
+  input { display: none; }
+  .detail-tip {
+    @include position(absolute, 20px 20px null null);
+    padding: 0.4em 1em;
+    font-size: em(14);
+    font-style: italic;
+  }
+  .editing {
+    input { display: inline-block; }
+    span { display: none; }
+  }
+
+  footer { margin-top: 1em; }
+}

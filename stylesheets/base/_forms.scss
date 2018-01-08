@@ -1,0 +1,186 @@
+$form-border-color: $base-border-color;
+$form-border-color-hover: darken($base-border-color, 10);
+$form-border-color-focus: #29b6f6;
+$form-border-radius: $base-border-radius;
+$form-box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+$form-font-size: $base-font-size;
+$form-font-family: $base-font-family;
+
+fieldset {
+  //background: lighten($base-border-color, 10);
+  border: 1px solid $base-border-color;
+  margin: 0 0 ($base-line-height / 2) 0;
+  padding: $base-line-height;
+}
+
+input,
+label,
+select {
+  display: block;
+  font-family: $form-font-family;
+  font-size: $form-font-size;
+}
+
+label {
+  font-weight: normal;
+  margin-bottom: $base-line-height / 4;
+
+  &.required:after {
+    content: "*";
+  }
+
+  abbr {
+    display: none;
+  }
+}
+
+textarea,
+select[multiple=multiple] {
+  @include box-sizing(border-box);
+  @include transition(border-color);
+  @include transition(box-shadow 0.3s);
+  background-color: white;
+  border-radius: $form-border-radius;
+  border: 1px solid $form-border-color;
+  box-shadow: $form-box-shadow;
+  font-family: $form-font-family;
+  font-size: $form-font-size;
+  margin-bottom: $base-line-height / 2;
+  padding: ($base-line-height / 3) ($base-line-height / 3);
+  width: 100%;
+
+  &:hover {
+    border-color: $form-border-color-hover;
+  }
+
+  &:focus {
+    //border-color: $form-border-color-focus;
+    box-shadow: $form-box-shadow-focus;
+    outline: none;
+  }
+}
+
+#{$all-text-inputs} {
+  @include transition(all 0.3s ease-in-out);
+  @include box-sizing(border-box);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $form-border-color;
+  //color: tint($base-font-color, 24%);
+
+  &:focus {
+    border-bottom: 1px solid $form-border-color-focus;
+    outline: none;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="search"] {
+  @include appearance(none);
+}
+
+input[type="checkbox"], input[type="radio"] {
+  display: inline;
+  margin-right: $base-line-height / 4;
+}
+
+input[type="file"] {
+  width: 100%;
+}
+
+input[type="email"]:invalid {
+  border-bottom: 1px solid red;
+}
+
+input[type="tel"]:invalid {
+  border-bottom: 1px solid red;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+
+::-webkit-input-placeholder {
+  font-weight: 200;
+  font-style: italic;
+}
+:-moz-placeholder { 
+  font-weight: 200;
+  font-style: italic;
+}
+
+::-moz-placeholder {  
+  font-weight: 200;
+  font-style: italic;
+}
+
+:-ms-input-placeholder {  
+  font-weight: 200;
+  font-style: italic;
+}
+
+select {
+  width: auto;
+  max-width: 100%;
+  margin-bottom: $base-line-height;
+}
+
+button,
+input[type="submit"] {
+  @extend %button;
+  @include appearance(none);
+  @include transition(all 0.2s ease-in-out);
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &.button-flat {
+    background: transparent;
+  }
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="submit"]:hover {
+  background-color: darken($light-gray, 5%);
+}
+
+button:focus {
+  outline: 0;
+}
+button:active,
+input[type="submit"]:active {
+  box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+}
+
+.button-primary {
+  background-color: $base-accent-color;
+  color: #FFF;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  background-color: darken($base-accent-color, 10%);
+}
+
+.button-xsmall { font-size: 70%; }
+.button-small { font-size: 85%; }
+.button-medium { } 
+.button-large { font-size: 110%; }
+.button-xlarge { font-size: 125%; }
+
+.button-raised {
+  box-shadow: 0px 4px 5px 1px #bbb;
+  &:active {
+    box-shadow: 0px 5px 8px 2px #bbb;
+  }
+}
