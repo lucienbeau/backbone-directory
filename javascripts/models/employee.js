@@ -1,0 +1,1 @@
+var app=app||{};!function(){"use strict";app.Employee=Backbone.Model.extend({defaults:{name:"<null>",title:"<null>",office:"<null>",cell:"<null>",email:"<null>",description:"<null>",img:"placeholder.gif"},toJSON:function(){var l=Backbone.Model.prototype.toJSON.apply(this,arguments);return l.cid=this.cid,l}})}();
